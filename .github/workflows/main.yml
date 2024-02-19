@@ -7,7 +7,7 @@ on:
 
 jobs:
   test-build:
-    runs on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -18,7 +18,7 @@ jobs:
       - name: Testing Build pre-Deploy
         uses: actions/setup-node@v2
         with:
-          node version: ${{ matriz.node-version }}
+          node version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm i
       - run: npm run build
