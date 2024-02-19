@@ -11,7 +11,6 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
- 
      
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +22,6 @@ jobs:
       - run: npm i
       - run: npm run build
  
-   
   deploy:
     needs: test-build
     runs-on: ubuntu-latest
